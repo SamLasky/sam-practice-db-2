@@ -10,6 +10,7 @@ object Engine extends App with Database {
   val database = List[User]()
   val updatedDatabase = createUser(joach, database)
   val updatedDatabase2 = createUser(milg, updatedDatabase)
+  val mongoClient: MongoClient = MongoClient()
 
   val myLilUserBoi = getUser("joach", updatedDatabase2)
   //println(myLilUserBoi)
